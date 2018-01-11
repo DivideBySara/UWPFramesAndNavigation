@@ -24,7 +24,7 @@ namespace UWPFramesAndNavigation
     {
         public MainPage()
         {
-            this.InitializeComponent();
+            this.InitializeComponent()
         }
     }
 }
