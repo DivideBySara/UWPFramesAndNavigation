@@ -1,5 +1,5 @@
 ﻿<Page
-    x:Class="UWPFramesAndNavigation.MainPage"
+    x:Class="UWPFramesAndNavigation.Page2"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:UWPFramesAndNavigation"
@@ -7,10 +7,10 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-    <StackPanel x:Name='sPanel1'>
-      <TextBlock x:Name='tblock2' Text='This is page 1' FontSize='50'/>
-      <Button x:Name='btn1' Content='Page 2' FontSize='50' Click='btn1_Click'/>
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">    
+    <StackPanel x:Name='sPanel2'>
+      <TextBlock x:Name='tblock1' Text='This is page 2' FontSize='50'/>
+      <Button x:Name='btn2' Content='Page 1' FontSize='50' Click='btn2_Click'/>
     </StackPanel>
-    </Grid>
+  </Grid>
 </Page>
