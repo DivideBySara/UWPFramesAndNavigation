@@ -9,8 +9,9 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">    
     <StackPanel x:Name='sPanel2'>
+      <Button x:Name="btn3" FontSize="50" Content="Back" Click="btn3_Click"/>
       <TextBlock x:Name='tblock1' Text='This is page 2' FontSize='50'/>
-      <Button x:Name='btn2' Content='Page 1' FontSize='50' Click='btn2_Click'/>
+      <Button x:Name='btn2' Content='Go to Page 1' FontSize='50' Click='btn2_Click'/>
     </StackPanel>
   </Grid>
 </Page>
