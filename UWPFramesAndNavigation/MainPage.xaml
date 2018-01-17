@@ -8,10 +8,18 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="Auto"/>
+      <ColumnDefinition/>
+    </Grid.ColumnDefinitions>
     <StackPanel x:Name='sPanel1'>
+      <Button x:Name="btn3" FontSize="50" Content="Go Back" BorderBrush="Aqua" Click="btn3_Click" />
       <TextBlock x:Name='tblock2' Text='This is page 1' FontSize='50'/>
-      <Button x:Name='btn1' Content='Go toPage 2' FontSize='50' Click='btn1_Click'/>
+      <Button x:Name="btn4" FontSize="50" Content="Go to Subpage 1 in frame" BorderBrush="Green" Click="btn4_Click"/>
+      <Button x:Name="btn5" FontSize="50" Content="Go to Subpage 2 in frame" Click="btn5_Click" BorderBrush="Purple"/>
+      <Button x:Name='btn1' Content='Go toPage 2' FontSize='50' Click='btn1_Click' BorderBrush="PeachPuff"/>
       <HyperlinkButton x:Name="btn2" Click="btn2_Click" Content="Go to Page 2" FontSize="50"/>
     </StackPanel>
-    </Grid>
+    <Frame x:Name="innerFrame" Grid.Column="1"/>
+  </Grid>
 </Page>

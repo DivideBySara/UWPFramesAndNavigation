@@ -36,5 +36,31 @@ namespace UWPFramesAndNavigation
         {
             this.Frame.Navigate(typeof(Page2));
         }
+
+        // Disables go back button when page loads because there's nothing to go back to.
+        // Doesn't work if user navigates and then tries to navigate too far back. :-(
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
+            innerFrame.Navigate(typeof(BlankSubPage1));
+            this.btn3.IsEnabled = innerFrame.BackStack.Any();
+        }
+
+        private void btn4_Click(object sender, RoutedEventArgs e)
+        {
+            innerFrame.Navigate(typeof(BlankSubPage1));
+            this.btn3.IsEnabled = innerFrame.BackStack.Any();
+        }
+
+        private void btn5_Click(object sender, RoutedEventArgs e)
+        {
+            innerFrame.Navigate(typeof(BlankSubPage2));
+            this.btn3.IsEnabled = innerFrame.BackStack.Any();
+        }
+
+        private void btn3_Click(object sender, RoutedEventArgs e)
+        {
+            innerFrame.GoBack();
+        }
     }
 }
